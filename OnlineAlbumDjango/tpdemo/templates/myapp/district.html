@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax实战--城市级联信息操作</title>
+	<script type="text/javascript" src="/static/js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//加载一级城市信息
+			$.ajax({
+				type:"get",
+				url:"{% url 'district' 0 %}",
+				dataType:"json",
+				async:false,
+				success:function(res){
+					list = res.data;
+					for(var i=0;i<list.length;i++){
+						$("#cid").append("<option value='"+list[i].id+"'>"+list[i].name+"</option>");
+					}
+				}
+			});
+
+			//获取下拉框并绑定选择事件，加载下一级城市信息
+			$("select").live('change',function(){
+				var id = $(this).val();
+				//alert(id);
+				$(this).nextAll().remove()
+				$.ajax({
+					type:"get",
+					url:"/district/"+id,
+					dataType:"json",
+					async:false,
+					success:function(res){
+						if(res.data.length<1)
+							return
+						list = res.data;
+						var select = $("<select></select>");
+						for(var i=0;i<list.length;i++){
+							select.append("<option value='"+list[i].id+"'>"+list[i].name+"</option>");
+						}
+						$("select:last").after(select);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2>Ajax实战--城市级联信息操作</h2>
+
+	<select id="cid">
+		<option>-请选择-</option>
+	</select>
+</body>
+</html>

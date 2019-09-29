@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>在线相册信息管理</title>
+	<script type="text/javascript">
+		function doDel(url){
+			if(confirm("确定要删除吗？")){
+				window.location=url
+			}
+		}
+	</script>
+</head>
+<body>
+	<center>
+		{% include "myapp/photos/menu.html" %}
+		<h3>浏览相册信息</h3>
+            <table width="800" border="1">
+                <tr>
+                    <th>id号</th>
+                    <th>标题</th>
+                    <th>图片</th>
+                    <th>时间</th>
+                    <th>操作</th>
+                </tr>
+				{% for photo in ulist %}
+					<tr>
+						<td>{{photo.id}}</td>
+						<td>{{photo.title}}</td>
+						<td>
+							{% load staticfiles %}
+							{% with 'pics/s_'|add:photo.photo_name as image_static %}
+								<img src="{% static image_static %}">
+							{% endwith %}
+						</td>
+						<td>{{photo.addtime|date:"Y-m-d H:i:s"}}</td>
+						<td>
+							<a href="{% url 'editphotos' photo.id %}">编辑</a>
+							<a href="javascript:doDel('{% url 'delphotos' photo.id %}')">删除</a>
+						</td>
+					</tr>
+				{% endfor%}
+			</table>
+
+            {% for i in plist %}
+                {% if i == pIndex %}
+                    <b style="color:red">{{i}}</b>
+                {% else %}
+                    <a href="{% url 'photos' i %}">{{i}}</a>
+                {% endif %}
+            {% endfor %}
+	</center>
+</body>
+</html>

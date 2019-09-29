@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Django框架的视图实例</title>
+
+</head>
+<body>
+	<h2>Django框架的视图层实例</h2>
+	<hr/>
+	<h3>HttpResponse对象</h3>
+	<ul>
+		<li><a href="{% url 'rpdemo' 'a'%}">1. 直接返回数据信息</a></li>
+		<li><a href="{% url 'rpdemo' 'b'%}">2. 通过模板返回数据</a></li>
+		<li><a href="{% url 'rpdemo' 'c'%}">3. 重定向跳转1</a></li>
+		<li><a href="{% url 'rpdemo' 'd'%}">4. 返回JSON数据</a></li>
+		<li><a href="{% url 'rpdemo' 'e'%}">5. 设置COOKIE信息</a></li>
+		<li><a href="{% url 'rpdemo' 'f'%}">6. 获取COOKIE信息</a></li>
+		<li><a href="{% url 'rpdemo' 'g'%}">7. 无效请求</a></li>
+	</ul>
+
+	<br/><hr/>
+	<h3>HttpRequest对象</h3>
+	<h4>GET表单提交</h4>
+	<form action="{% url 'rqdemo'%}" method="get">
+	    姓名：<input type="text" name="uname"/><br/>
+	    年龄：<input type="text" name="uage"/><br/>
+	    <input type="submit" value="提交"/>
+	</form>
+	<br/>
+	<a href="/rq?uname=qq&uage=32">get提交</a>
+
+	<h4>POST表单提交</h4>
+	<form action="{% url 'rqdemo'%}" method="post">
+		{% csrf_token %}
+	    姓名：<input type="text" name="uname"/><br/>
+	    年龄：<input type="text" name="uage"/><br/>
+	    验证码：<img src="{% url 'verifycode' %}" onclick="this.src='{% url 'verifycode' %}?id='+Math.random()" /><br/>
+	    爱好：<input type="checkbox" name="likes" value="胸口碎大石"/>胸口碎大石
+    		 <input type="checkbox" name="likes" value="空手劈榴莲"/>空手劈榴莲
+    		 <input type="checkbox" name="likes" value="喝酒"/>喝酒
+    		 <input type="checkbox" name="likes" value="爬山"/>爬山<br>
+	    <input type="submit" value="提交"/>
+	</form>
+
+	<h4><a href="{% url 'verifycode' %}">验证码</a></h4>
+
+</body>
+</html>	
