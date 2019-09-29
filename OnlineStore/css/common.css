@@ -1,0 +1,107 @@
+ /*===公共样式设置===*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th{margin:0px;padding:0px;}
+body{font:normal 12px/1.8 "宋体",Verdana, Geneva, sans-serif; color:#333333;}
+input:hover{box-shadow:0 0 4px #0055c6;}
+ul{ list-style:none;}
+img{ border:0 none;}
+.clear{clear:both;width:100%;height:4px;}
+a{ color:#666666; text-decoration:none;}
+a:hover{ color:#f00; text-decoration:underline;}
+h2.en{color:#bd022f; font-weight:bold; font-family:'微软雅黑'; letter-spacing:1px; float:left; padding-left:10px;}
+.more{color:#af406a; float:right; padding:8px 10px 0 0;}
+.moreb{color:#af406a; float:right; padding-right:10px;}
+/*==========*/
+#container{width:980px; margin:0 auto;}
+/*===============头部样式开始================*/
+#header{width:100%; margin:0 auto;}
+/*===========header开始===============*/
+.header_logo{width:400px; height:112px; float:left;}
+.header_link{width:300px; height:100px; float:left;}
+.header_link li{float:left;margin-top:30px; padding: 0 6px;margin-right:15px}
+
+/*===========header结束===============*/
+/*===========header_nav开始===============*/
+.header_nav{width:100%; height:40px;}
+.header_nav ul{width:85%; float:left;}
+/*===========header_nav结束===============*/
+/*===========header_search开始===============*/
+.header_search{width:100%; height:35px; background:#f2f2f2 url(../images/header_search.jpg) no-repeat right 5px; color:#666666; line-height:35px;}
+.search{color:#666666;height:20px;float:left;margin:5px 2px 0 10px;}
+.sousuo{margin-top:5px; float:left;}
+/*===========header_search结束===============*/
+/*===============头部样式结束================*/
+
+/*===============主体样式开始================*/
+#main{width:100%;}
+
+/*===============footer开始================*/
+#footer{width:100%; margin-top:10px;}
+.footer_help{margin-left: 100px; padding:10px;}
+.footer_content {margin-right:130px; font:15px 'Sans-serif';}
+.footer_content a{font:15px 'Sans-serif'; color:#000; display:block; width:150px; height:40px; line-height:40px;}
+.footer_content a:hover{width:150px; height:40px; color:#fff; background:#ccc; text-decoration:none;}
+.footer_help ul{float:left; margin-top:20px; margin-left:25px;}
+.footer_help ul li{width:100px; text-align:center}
+
+.footer_contact{border-top:1px dotted #d6d6d6; padding:5px; text-align:center; margin-top:10px;}
+/*===============footer结束================*/
+
+/*===============下拉菜单开始==============*/
+#jsddm{margin-left:15px; padding:0px; width:1100px;}
+#jsddm .header_logo{float:left; height:22px; width:200px; margin-top:18px; margin-left:30px}
+#jsddm li.zong{float:left; text-align:center; line-height:40px; width:60px;margin-top:11px; margin-left:40px}
+#jsddm li.zong a{font:15px 'Sans-serif'; color:#000; display:block; width:88px; height:40px; line-height:40px;}
+#jsddm li.zong a:hover{width:88px; height:40px; color:white; background:#555; text-decoration:none;}
+#jsddm li ul.zi{margin: 0px; padding: 0; position:absolute; visibility:hidden; width:400px; height:300px; background:#eee;}
+#jsddm li ul li{text-align:left; float:left; display:inline; width:120px; height:30px; margin:25px}
+#jsddm li ul li a{width: 88px; background:none !important; color:#666666 !important;}
+#jsddm li ul li a:hover{text-decoration:underline !important; color:black !important;}
+/*===============下拉菜单结束==============*/
+
+/*===========header_search开始===============*/
+#jsddm .header_link_right{width:200px; height:50px; float:right; margin-top: 8px;}
+#jsddm .header_link_right ul{float:right; width:200px; border:1px}
+#jsddm .header_link_right ul li{float:right; padding: 0px; margin-left:15px}
+#jsddm .search{color:#666666; height:20px; float:left;}
+#jsddm .sousuo{margin-top:0px; float:left; position:relative; z-index:0}
+/*===========header_search结束===============*/
+
+/*===========正文开始===============*/
+.body_left{float:left;height:1000px; width:593px;}
+.body_right{float:right;height:1000px; width:593px;}
+/*===========正文结束===============*/
+
+/*===========women page 正文开始===============*/
+.title{text-align:center; font:'Arial' bold;}
+.FirstRow{float:left;height:400px; width:1200px;}
+.FirstRow ul li{float:left; margin-right:20px; text-align:center; font:17px 'Arial'; color:#000}
+.FirstRow ul li a{font:17px 'Arial'; color:#000}
+
+.SecondRow{float:left;height:600px; width:1200px; padding-left:135px;}
+.SecondRow ul li{float:left; margin-right:20px; margin-left:30px; text-align:center; font:17px 'Arial'; color:#000}
+.SecondRow ul li a{font:17px 'Arial'; color:#000}
+/*===========women page 正文结束===============*/
+
+/*===========women dress page 正文开始===============*/
+.dress_FirstRow{float:left;height:850px; width:1200px;}
+.dress_FirstRow ul li{float:left; margin-right:40px; text-align:center; font:17px 'Arial'; color:#000}
+.dress_FirstRow ul li a{font:17px 'Arial'; color:#000}
+.item_title{font:11px 'Arial';}
+.item_price{font:10px 'Arial';}
+
+/*===========women dress page 正文结束===============*/
+
+/*===========women dress1 page 正文开始===============*/
+.dress1_FirstRow{float:left;height:1200px; width:1200px;border:1px solid #c7c3c4;}
+.dress1_FirstRow ul li{float:left; margin-left:80px; margin-right:80px; text-align:center; font:17px 'Arial'; color:#000}
+.dress1_FirstRow ul li a{font:17px 'Arial'; color:#000}
+.text{width:400px; height:500px; margin-top:80px; float:left;}
+.item1_title{font:16px 'Arial'; float:left;}
+.item1_price{font:15px 'Arial'; float:left;}
+.text_text{width:400px; margin-top:30px; float:left;}
+.text_text ul{background:#000; margin:0px; float:right; width:100px; height:40px;}
+.text_text ul li{color:#fff;margin-top:10px;width:100px;text-align:left;margin-left:6px;}
+.text_text ul li a{color:#fff}
+.text p{text-align:left; font:14px 'Arial';}
+/*===========women dress1 page 正文结束===============*/
+

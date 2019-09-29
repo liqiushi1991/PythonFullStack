@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./css/common.css">
+		<link rel="stylesheet" type="text/css" href="./css/index.css">
+        <title>Burberry Online Store</title>
+        		<script src="./js/index.js" type="text/javascript"></script>
+		<script src="./js/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var timeout         = 500;
+			var closetimer		= 0;
+			var ddmenuitem      = 0;
+
+			function jsddm_open()
+			{	jsddm_canceltimer();
+				jsddm_close();
+				ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+
+			function jsddm_close()
+			{	if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+
+			function jsddm_timer()
+			{	closetimer = window.setTimeout(jsddm_close, timeout);}
+
+			function jsddm_canceltimer()
+			{	if(closetimer)
+				{	window.clearTimeout(closetimer);
+					closetimer = null;}}
+
+			$(document).ready(function()
+			{	$('#jsddm > li').bind('mouseover', jsddm_open);
+				$('#jsddm > li').bind('mouseout',  jsddm_timer);});
+
+			document.onclick = jsddm_close;
+		</script>
+    </head>
+    <body>
+        <!--导航栏开始-->
+        <div class="header_nav">
+            <ul id="jsddm">
+                <div><img class="header_logo" src="./images/brand.png"></div>
+                <li class="zong"><a href="women.html">WOMEN</a>
+                    <ul class="zi">
+                        <li><a href="women_dress.html">Coats</a></li>
+                        <li><a href="women_dress.html">Dresses</a></li>
+                        <li><a href="women_dress.html">Bags</a></li>
+                        <li><a href="women_dress.html">Accessories</a></li>
+                        <li><a href="women_dress.html">Shoes</a></li>
+                        <li><a href="women_dress.html">Make-up</a></li>
+                    </ul>
+                </li>
+                <!--<li><a style="color:black;font-weight:bold;" href="">MEN</a>-->
+                <li class="zong"><a href="">MEN</a>
+                    <ul class="zi">
+                        <li><a href="#">Coats</a></li>
+                        <li><a href="#">Jeans</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Fragrance</a></li>
+                    </ul>
+                </li>
+                <!--<li class="zong"><a href="">CHILDREN</a>-->
+                    <!--<ul class="zi">-->
+                        <!--<li><a href="#">Coats</a></li>-->
+                        <!--<li><a href="#">Jeans</a></li>-->
+                        <!--<li><a href="#">Bags</a></li>-->
+                        <!--<li><a href="#">Accessories</a></li>-->
+                        <!--<li><a href="#">Shoes</a></li>-->
+                   <!--</ul>-->
+                <!--</li>-->
+                <div class="header_link_right">
+                    <ul>
+                        <li><a href="" target="_blank">SIGN IN</a></li>
+                        <li><a style="color:black;font-weight:bold;" href="register.html" target="_blank">SIGN UP</a></li>
+                    </ul>
+                    <input type="search" size="25" name="sousuo" value="Search" class="search"><input type="image" name="submit" class="sousuo" src="./images/search.png" width="30"><span style="float:right; padding-right:30px;"></span></li>
+
+                </div>
+            </ul>
+        </div>
+        <!--导航栏结束-->
+
+        <!--分割线-->
+        <br>
+        <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3) position=relative z-index=99999" color=black SIZE=1 >
+        <!--分割线-->
+        <br>
+
+        <!--正文开始-->
+        <div id="body">
+            <div class="dress1_FirstRow">
+                <ul>
+                    <li><img src="./images/women/dress/1.png" name="picture"
+                                         onMouseOver="this.src='./images/women/dress/1_1.png'" onMouseOut="this.src='./images/women/dress/1.png'" width="400">
+                    </li>
+                    <li>
+                        <div class="text">
+                            <br><br>
+                            <b class="item1_title">Vintage Check Cotton Tie-waist Shirt Dress</b><br><br>
+                            <b class="item1_price">$ 650.00</b><br><br>
+                            <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3) position=relative z-index=99999" color=black SIZE=1 ><br>
+                            <b class="item1_price">Color:</b>
+                            <select class="item1_price">
+                                <option value ="yellow">Yellow</option>
+                            </select>
+                            <br><br>
+                            <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3) position=relative z-index=99999" color=black SIZE=1 ><br>
+
+                            <b class="item1_price">Size:</b>
+                            <select class="item1_price">
+                                <option value ="L">L</option>
+                                <option value ="M">M</option>
+                                <option value ="S">S</option>
+                            </select>
+                            <br><br>
+                            <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3) position=relative z-index=99999" color=black SIZE=1 ><br>
+                            <div class="text_text">
+                                <ul>
+                                    <li><a href="#">Add to Bag</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="text">
+                            <h3>DESCRIPTION</h3><br>
+                            <p>A Vintage check cotton shirt dress – a plaid first seen in the 1960s. The design is cut for a slightly loose fit, knot the belt for a defined fit. Wear alone with sneakers, or with slim jeans and boots.
+                                <br><br></p>
+                            <p>Dress length: 76cm/29.9in. This is based on a size UK 8 as proportions change slightly according to size.<br><br></p>
+                            <p>100% cotton<br></p><br>
+                            <p>Buttons: mother-of-pearl<br></p>
+                            <p>Long sleeves with buttoned cuffs<br></p>
+                            <p>Concealed button closure<br></p>
+                            <p>Chest patch pocket, side slip pockets<br></p>
+                            <p>Self-tie belt<br></p>
+                            <p>Curved hem<br></p>
+                            <p>Machine wash<br></p>
+                            <p>Imported<br></p>
+                            <p>Item 40734551<br></p>
+                        </div>
+                    </li>
+                    <li><img src="./images/women/dress/1_2.png" name="picture" width="400">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--正文结束-->
+
+        <br>
+		<!--footer开始-->
+        <div id="footer">
+            <div class="footer_help">
+                <ul>
+                    <li class="footer_content"><a href="">Our company</a></li>
+                </ul>
+                <ul>
+                    <li class="footer_content"><a href="">Customer Service</a></li>
+                </ul>
+                <ul>
+                    <li class="footer_content"><a href="">Store Location</a></li>
+                </ul>
+                <ul>
+                    <li class="footer_content"><a href="">Language</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="footer_contact">
+                Copyright @ 2014-2019 All rights reserved.
+            </div>
+        </div>
+        <!--footer结束-->
+
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./css/common.css">
+		<link rel="stylesheet" type="text/css" href="./css/index.css">
+        <title>Burberry Online Store</title>
+        		<script src="./js/index.js" type="text/javascript"></script>
+		<script src="./js/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var timeout         = 500;
+			var closetimer		= 0;
+			var ddmenuitem      = 0;
+
+			function jsddm_open()
+			{	jsddm_canceltimer();
+				jsddm_close();
+				ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+
+			function jsddm_close()
+			{	if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+
+			function jsddm_timer()
+			{	closetimer = window.setTimeout(jsddm_close, timeout);}
+
+			function jsddm_canceltimer()
+			{	if(closetimer)
+				{	window.clearTimeout(closetimer);
+					closetimer = null;}}
+
+			$(document).ready(function()
+			{	$('#jsddm > li').bind('mouseover', jsddm_open);
+				$('#jsddm > li').bind('mouseout',  jsddm_timer);});
+
+			document.onclick = jsddm_close;
+		</script>
+    </head>
+    <body>
+        <!--导航栏开始-->
+        <div class="header_nav">
+            <ul id="jsddm">
+                <div><img class="header_logo" src="./images/brand.png"></div>
+                <li class="zong"><a href="women.html">WOMEN</a>
+                    <ul class="zi">
+                        <li><a href="women_dress.html">Coats</a></li>
+                        <li><a href="women_dress.html">Dresses</a></li>
+                        <li><a href="women_dress.html">Bags</a></li>
+                        <li><a href="women_dress.html">Accessories</a></li>
+                        <li><a href="women_dress.html">Shoes</a></li>
+                        <li><a href="women_dress.html">Make-up</a></li>
+                    </ul>
+                </li>
+                <!--<li><a style="color:black;font-weight:bold;" href="">MEN</a>-->
+                <li class="zong"><a href="">MEN</a>
+                    <ul class="zi">
+                        <li><a href="women_dress.html">Coats</a></li>
+                        <li><a href="women_dress.html">Jeans</a></li>
+                        <li><a href="women_dress.html">Bags</a></li>
+                        <li><a href="women_dress.html">Accessories</a></li>
+                        <li><a href="women_dress.html">Shoes</a></li>
+                        <li><a href="women_dress.html">Fragrance</a></li>
+                    </ul>
+                </li>
+                <!--<li class="zong"><a href="">CHILDREN</a>-->
+                    <!--<ul class="zi">-->
+                        <!--<li><a href="#">Coats</a></li>-->
+                        <!--<li><a href="#">Jeans</a></li>-->
+                        <!--<li><a href="#">Bags</a></li>-->
+                        <!--<li><a href="#">Accessories</a></li>-->
+                        <!--<li><a href="#">Shoes</a></li>-->
+                   <!--</ul>-->
+                <!--</li>-->
+                <div class="header_link_right">
+                    <ul>
+                        <li><a href="" target="_blank">SIGN IN</a></li>
+                        <li><a style="color:black;font-weight:bold;" href="register.html" target="_blank">SIGN UP</a></li>
+                    </ul>
+                    <input type="search" size="25" name="sousuo" value="Search" class="search"><input type="image" name="submit" class="sousuo" src="./images/search.png" width="30"><span style="float:right; padding-right:30px;"></span></li>
+
+                </div>
+            </ul>
+        </div>
+        <!--导航栏结束-->
+
+        <!--分割线-->
+        <br>
+        <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3) position=relative z-index=99999" color=black SIZE=1 >
+        <!--分割线-->
+        <br>
+
+        <!--正文开始-->
+        <div id="body">
+            <h1 class="title">WOMEN</h1><br>
+            <div class="FirstRow">
+                <ul>
+                    <li><a href="women_dress.html"><img src="./images/women/dress.png" name="picture" width="380"><br><br>DRESS</a></li>
+                    <li><a href="women_dress.html"><img src="./images/women/coat.png" name="picture" width="380"><br><br>COATS</a></li>
+                    <li><a href="women_dress.html"><img src="./images/women/bags.png" name="picture" width="380"><br><br>BAGS</a></li>
+				</ul>
+            </div>
+            <div class="SecondRow">
+                <ul>
+                    <li><a href="#"><img src="./images/women/makeup.png" name="picture" height="530" width="400"><br><br>MAKE UP</a></li>
+                    <li><a href="#"><img src="./images/women/shoes.png" name="picture" height="530" width="400"><br><br>SHOES</a></li>
+				</ul>
+            </div>
+        </div>
+        <!--正文结束-->
+
+        <br>
+		<!--footer开始-->
+        <div id="footer">
+            <div class="footer_help">
+                <ul>
+                    <li class="footer_content"><a href="">Our company</a></li>
+                </ul>
+                <ul>
+                    <li class="footer_content"><a href="">Customer Service</a></li>
+                </ul>
+                <ul>
+                    <li class="footer_content"><a href="">Store Location</a></li>
+                </ul>
+                <ul>
+                    <li class="footer_content"><a href="">Language</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="footer_contact">
+                Copyright @ 2014-2019 All rights reserved.
+            </div>
+        </div>
+        <!--footer结束-->
+
+    </body>
+</html>
